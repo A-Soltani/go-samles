@@ -1,10 +1,19 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+)
 
 func main() {
 	// var card string = "Ace of Spades"
-	card := "Ace of spades"
+	card := "Ace of Spades"
+	fiveSpadesCard := getSpadesCard(5)
 
-	fmt.Print(card)
+	fmt.Print(card, "\n")
+	fmt.Print(fiveSpadesCard)
+}
+
+func getSpadesCard(number int) string {
+	return strconv.Itoa(number) + " of Spades"
 }
