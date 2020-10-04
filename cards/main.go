@@ -24,8 +24,5 @@ func setDeck() {
 	cards := deck{"Ace of Diamonds"} // this is a slice
 	cards = append(cards, "6 of Spades")
 
-	fmt.Println("Deck cards:")
-	for i, card := range cards {
-		fmt.Println(i+1, card)
-	}
+	cards.print()
 }
