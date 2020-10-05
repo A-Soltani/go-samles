@@ -4,7 +4,7 @@ import "fmt"
 
 type deck []string
 
-func newDeck() deck {
+func newDeck(cardsCount int) deck {
 	cards := deck{"Ace of Diamonds"} // this is a slice
 	return cards
 }
@@ -15,4 +15,8 @@ func (d deck) print() {
 	for i, card := range d {
 		fmt.Println(i+1, card)
 	}
+}
+
+func deal(d deck, handSize int) (deck, deck) {
+	return d[:handSize], d[handSize:]
 }
