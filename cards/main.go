@@ -21,7 +21,7 @@ func getSpadesCard(number int) string {
 }
 
 func setDeck() {
-	cards := deck{"Ace of Diamonds"} // this is a slice
+	cards := newDeck()
 	cards = append(cards, "6 of Spades")
 
 	cards.print()
