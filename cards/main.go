@@ -1,13 +1,19 @@
 package main
 
 import (
+	"fmt"
 	"strconv"
 )
 
 func main() {
 
-	setDeck()
+	cards := newDeck(10)
+	cards.print()
 
+	hands, remainingDeck := deal(cards, 5)
+
+	fmt.Println("hands", hands)
+	fmt.Println("remainingDeck", remainingDeck)
 	// var card string = "Ace of Spades"
 	// card := "Ace of Spades"
 	// fiveSpadesCard := getSpadesCard(5)
@@ -20,11 +26,4 @@ func main() {
 
 func getSpadesCard(number int) string {
 	return strconv.Itoa(number) + " of Spades"
-}
-
-func setDeck() {
-	cards := newDeck(5)
-	// cards = append(cards, "6 of Spades")
-
-	cards.print()
 }

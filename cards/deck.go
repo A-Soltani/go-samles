@@ -10,9 +10,9 @@ func newDeck(cardsCount int) deck {
 	cards := deck{"Ace of Diamonds"} // this is a slice
 	for i := 0; i < cardsCount; i++ {
 		card := getCrad()
-		if !cards.deckContainsCard(card) {
-			cards = append(cards, card)
-		}
+		// if !cards.deckContainsCard(card) {
+		cards = append(cards, card)
+		// }
 	}
 
 	return cards

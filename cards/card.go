@@ -17,7 +17,11 @@ func getCrad() string {
 	cardsTypes := getCardTypes()
 	cardType := cardsTypes[rand.Intn(4)]
 	fmt.Println("cardType", cardType)
-	cardNumber := rand.Intn(10)
+
+	min := 1
+	max := 10
+	cardNumber := rand.Intn(max-min) + min
+
 	fmt.Println("cardNumber", cardNumber)
 
 	if cardNumber == 1 {
