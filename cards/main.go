@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"strconv"
 )
 
@@ -12,8 +11,9 @@ func main() {
 
 	hands, remainingDeck := deal(cards, 5)
 
-	fmt.Println("hands", hands)
-	fmt.Println("remainingDeck", remainingDeck)
+	hands.print()
+	remainingDeck.print()
+
 	// var card string = "Ace of Spades"
 	// card := "Ace of Spades"
 	// fiveSpadesCard := getSpadesCard(5)
